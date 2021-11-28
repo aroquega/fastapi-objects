@@ -31,5 +31,5 @@ def create_object(object: schemas.ObjectCreate, db: Session = Depends(get_db)):
 
 
 @app.delete("/objects/{object_id}")
-def delete_object(object_id: int):
-    pass
+def delete_object(object_id: int, db: Session = Depends(get_db)):
+    crud.delete_object(db, object_id=object_id)

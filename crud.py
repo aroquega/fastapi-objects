@@ -17,3 +17,8 @@ def create_object(db: Session, object: schemas.ObjectCreate):
     db.commit()
     db.refresh(db_object)
     return db_object
+
+
+def delete_object(db: Session, object_id: int):
+    db.query(models.Object).filter(models.Object.id == object_id).delete()
+    db.commit()
