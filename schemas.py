@@ -7,11 +7,12 @@ class ObjectBase(BaseModel):
     description: Optional[str]
 
 
-class Object(BaseModel):
+class Object(ObjectBase):
+    id: int
+
     class Config:
         orm_mode = True
 
 
 class ObjectCreate(ObjectBase):
     pass
-
