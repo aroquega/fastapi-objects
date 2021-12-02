@@ -1,6 +1,5 @@
 from sqlalchemy.orm import Session
-import models
-import schemas
+from objects import models, schemas
 
 
 def get_object(db: Session, object_id: int):

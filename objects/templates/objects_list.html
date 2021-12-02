@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Objects</title>
+</head>
+<body>
+<h1>Lista de Objectos</h1>
+{% for object in objects %}
+<section>
+    <h2>{{object.name}}</h2>
+    <p>
+        {{object.description}}
+    </p>
+</section>
+{% endfor %}
+</body>
+</html>
